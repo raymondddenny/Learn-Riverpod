@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:learn_riverpo_example/pages/future_provider_example.dart';
+import 'package:learn_riverpo_example/pages/name_app_example.dart';
 import 'package:learn_riverpo_example/pages/simple_provider_example.dart';
 import 'package:learn_riverpo_example/pages/state_notifier_example.dart';
 import 'package:learn_riverpo_example/pages/stream_provider_example.dart';
@@ -29,6 +30,7 @@ final listOfExampleProvider = Provider<List<String>>(
     'State Notifier Example',
     'Future Provider Example',
     'Stream Provider Example',
+    'Name App Example'
   ],
 );
 
@@ -78,6 +80,14 @@ class HomePage extends ConsumerWidget {
                     context,
                     MaterialPageRoute(
                       builder: (context) => const StreamProviderExample(),
+                    ),
+                  );
+                  break;
+                case 4:
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const NameAppExample(),
                     ),
                   );
                   break;
